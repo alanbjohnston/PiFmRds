@@ -479,7 +479,7 @@ int tx(uint32_t carrier_freq, char *audio_file, uint16_t pi, char *ps, char *rt,
     
     printf("Starting to transmit on %3.1f MHz.\n", carrier_freq/1e6);
     int loop;
-    for (loop = 0; loop < 500; loop++) {  // Only loop once!
+    for (loop = 0; loop < 1000; loop++) {  // Only loop once!
         // Default (varying) PS
         if(varying_ps) {
             if(count == 512) {
