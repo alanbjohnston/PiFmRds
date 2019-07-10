@@ -403,7 +403,7 @@ int tx(uint32_t carrier_freq, char *audio_file, uint16_t pi, char *ps, char *rt,
     //
     // So we use the 'ppm' parameter to compensate for the oscillator error
 
-    float divider = (500000./(2*114*(1.+ppm/1.e6)));  // 228 -> 114
+    float divider = (500000./(2*228*(1.+ppm/1.e6))); 
     uint32_t idivider = (uint32_t) divider;
     uint32_t fdivider = (uint32_t) ((divider - idivider)*pow(2, 12));
     
