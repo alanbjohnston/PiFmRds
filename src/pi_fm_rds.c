@@ -79,7 +79,7 @@
  * frequencies is immoral and dangerous, whereas "breaking in" on FM bands is
  * just plain illegal."
  *
- * "Don't get caught, this GPIO use has the potential to exceed the legal/
+ * "Don't get caught, this GPIO use has the potential to exceed the legal
  * limits by about 2000% with a proper aerial."
  *
  *
@@ -144,8 +144,7 @@
 #define DMA_LEN            0x24
 #define PWM_BASE_OFFSET        0x0020C000
 #define PWM_LEN            0x28
-#define CLK_BASE_OFFSET            0x0010//
-
+#define CLK_BASE_OFFSET            0x00101000
 #define CLK_LEN            0xA8
 #define GPIO_BASE_OFFSET    0x00200000
 #define GPIO_LEN        0x100
