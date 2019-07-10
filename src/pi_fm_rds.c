@@ -9,7 +9,7 @@
  * PI-FM-RDS: RaspberryPi FM transmitter, with RDS. 
  *
  * This file contains the VHF FM modulator. All credit goes to the original
- * authors, Oliver Mattos and Oskar Weigl for the original idea, and to
+ * authors, Oliver Mattos and Oskar Weigl for the original idea, and to/
  * Richard Hirst for using the Pi's DMA engine, which reduced CPU usage
  * dramatically.
  *
@@ -478,7 +478,7 @@ int tx(uint32_t carrier_freq, char *audio_file, uint16_t pi, char *ps, char *rt,
     
     printf("Starting to transmit on %3.1f MHz.\n", carrier_freq/1e6);
     int loop;
-    for (i = 0; i < 1000;i++) {  Only loop once!
+    for (i = 0; i < 1000;i++) {  // Only loop once!
         // Default (varying) PS
         if(varying_ps) {
             if(count == 512) {
