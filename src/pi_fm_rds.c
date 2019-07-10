@@ -478,7 +478,7 @@ int tx(uint32_t carrier_freq, char *audio_file, uint16_t pi, char *ps, char *rt,
     
     printf("Starting to transmit on %3.1f MHz.\n", carrier_freq/1e6);
 
-    for (;;) {
+    //for (;;) {  Only loop once!
         // Default (varying) PS
         if(varying_ps) {
             if(count == 512) {
@@ -532,7 +532,7 @@ int tx(uint32_t carrier_freq, char *audio_file, uint16_t pi, char *ps, char *rt,
             free_slots -= SUBSIZE;
         }
         last_cb = (uint32_t)mbox.virt_addr + last_sample * sizeof(dma_cb_t) * 2;
-    }
+    //}
 
     return 0;
 }
