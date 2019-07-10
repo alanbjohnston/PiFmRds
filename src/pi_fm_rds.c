@@ -16,7 +16,7 @@
  * I (Christophe Jacquet) have adapted their idea to transmitting samples
  * at 228 kHz, allowing to build the 57 kHz subcarrier for RDS BPSK data.
  *
- * To make it work on the Raspberry Pi 2, I used a fix by Richard Hirst
+ * To make it work on the Raspberry Pi 2, I used a fix by Richard Hirst;;
  * (again) to request memory using Broadcom's mailbox interface. This fix
  * was published for ServoBlaster here:
  * https://www.raspberrypi.org/forums/viewtopic.php?p=699651#p699651
@@ -477,8 +477,8 @@ int tx(uint32_t carrier_freq, char *audio_file, uint16_t pi, char *ps, char *rt,
     
     
     printf("Starting to transmit on %3.1f MHz.\n", carrier_freq/1e6);
-
-    //for (;;) {  Only loop once!
+    int loop;
+    for (i = 0; i < 1000;i++) {  Only loop once!
         // Default (varying) PS
         if(varying_ps) {
             if(count == 512) {
@@ -532,7 +532,7 @@ int tx(uint32_t carrier_freq, char *audio_file, uint16_t pi, char *ps, char *rt,
             free_slots -= SUBSIZE;
         }
         last_cb = (uint32_t)mbox.virt_addr + last_sample * sizeof(dma_cb_t) * 2;
-    //}
+    }
 
     return 0;
 }
