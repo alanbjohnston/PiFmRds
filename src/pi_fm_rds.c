@@ -144,7 +144,8 @@
 #define DMA_LEN            0x24
 #define PWM_BASE_OFFSET        0x0020C000
 #define PWM_LEN            0x28
-#define CLK_BASE_OFFSET            0x00101000
+#define CLK_BASE_OFFSET            0x0010//
+
 #define CLK_LEN            0xA8
 #define GPIO_BASE_OFFSET    0x00200000
 #define GPIO_LEN        0x100
@@ -478,7 +479,7 @@ int tx(uint32_t carrier_freq, char *audio_file, uint16_t pi, char *ps, char *rt,
     
     printf("Starting to transmit on %3.1f MHz.\n", carrier_freq/1e6);
     int loop;
-    for (loop = 0; loop < 1000; loop++) {  // Only loop once!
+    for (loop = 0; loop < 170; loop++) {  // Only loop once!
         // Default (varying) PS
         if(varying_ps) {
             if(count == 512) {
